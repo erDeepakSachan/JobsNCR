@@ -66,8 +66,17 @@
 
                 var moreInfo = '';
                 var postedOn = '';
-                let outputTable = '';
+                let outputTable = '<div class="section-title row text-center">';
+                outputTable += '<div class="col-md-8 offset-md-2">';
+                outputTable += '<p class="lead">इस वेबसाइट पर पोस्ट की गई सभी नौकरियाँ और जानकारी बिल्कुल सही और मुफ्त है। हम किसी भी नौकरी के लिए कोई शुल्क नहीं लेते है। कृपया धोखाधड़ी से सावधान रहें!</p>';
+                outputTable += '</div>';
+                outputTable += '</div>';
+                outputTable += '<hr class="invis">';
+                var rowCtr = 1;
                 jsonData.forEach(row => {
+                    if (rowCtr == 1) {
+                        outputTable += '<div class="row">';
+                    }
                     outputTable += '<div class="col-lg-3 col-md-6 col-12">';
                     outputTable += '<div class="course-item">';
                     outputTable += '<div class="image-blog">';
@@ -105,6 +114,12 @@
                     outputTable += '</div>';
                     outputTable += '</div>';
                     outputTable += '</div>';
+                    if (rowCtr == 4) {
+                        outputTable += '</div>';
+                        outputTable += '<hr class="hr3">';
+                        rowCtr = 0;
+                    }
+                    rowCtr++;
                 });
 
                 // Display the result in the "output" div
@@ -260,15 +275,9 @@
     </div>
 
     <div id="overviews" class="section wb">
-        <div class="container">
-            <div class="section-title row text-center">
-                <div class="col-md-8 offset-md-2">
-                    <p class="lead">इस वेबसाइट पर पोस्ट की गई सभी नौकरियाँ और जानकारी बिल्कुल सही और मुफ्त है। हम किसी भी नौकरी के लिए कोई शुल्क नहीं लेते है। कृपया धोखाधड़ी से सावधान रहें!</p>
-                </div>
-            </div><!-- end title -->
+        <div class="container" id="output">
             
-            <hr class="invis">
-            <div class="row" id="output">
+            <div class="row">
                 <!--<div id="output"></div>-->
                 <!--<div class="col-lg-3 col-md-6 col-12">
                     <div class="course-item">
