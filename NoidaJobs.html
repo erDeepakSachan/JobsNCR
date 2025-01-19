@@ -68,11 +68,12 @@
 
                 var moreInfo = '';
                 var postedOn = '';
-                let outputTable = '<div class="section-title row text-center">';
-                outputTable += '<div class="col-md-8 offset-md-2">';
-                outputTable += '<p class="lead" style="font-size: 13px;">इस वेबसाइट पर पोस्ट की गई सभी नौकरियाँ और जानकारी पूरी तरह से सही और मुफ्त हैं। हम किसी भी नौकरी के लिए कोई शुल्क नहीं लेते हैं। हमारी प्राथमिकता है कि आप एक सुरक्षित और भरोसेमंद नौकरी की तलाश कर सकें। कृपया धोखाधड़ी से बचने के लिए सतर्क रहें और किसी भी प्रकार के शुल्क या व्यक्तिगत जानकारी की मांग से बचें। आपके करियर की सफलता में हम हमेशा आपके साथ हैं!</p>';
-                outputTable += '</div>';
-                outputTable += '</div>';
+                let outputTable = '';
+                //outputTable += '<div class="section-title row text-center">';
+                //outputTable += '<div class="col-md-8 offset-md-2">';
+                //outputTable += '<p class="lead" style="font-size: 13px;">इस वेबसाइट पर पोस्ट की गई सभी नौकरियाँ और जानकारी पूरी तरह से सही और मुफ्त हैं। हम किसी भी नौकरी के लिए कोई शुल्क नहीं लेते हैं। हमारी प्राथमिकता है कि आप एक सुरक्षित और भरोसेमंद नौकरी की तलाश कर सकें। कृपया धोखाधड़ी से बचने के लिए सतर्क रहें और किसी भी प्रकार के शुल्क या व्यक्तिगत जानकारी की मांग से बचें। आपके करियर की सफलता में हम हमेशा आपके साथ हैं!</p>';
+                //outputTable += '</div>';
+                //outputTable += '</div>';
                 outputTable += '<hr class="invis">';
                 var rowCtr = 1;
                 jsonData.forEach(row => {
@@ -181,7 +182,7 @@
                                 <a class="dropdown-item" href="blog-single.html">Blog single </a>
                             </div>
                         </li>-->
-                        <li class="nav-item active"><a class="nav-link" href="NoidaJobs.html">Jobs In Noida</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="noidaJobs.html">Jobs In Noida</a></li>
                         <li class="nav-item"><a class="nav-link" href="guruJobs.html">Jobs In Gurgaon & Faridabad</a></li>
                         <li class="nav-item"><a class="nav-link" href="delhiJobs.html">Jobs In Delhi</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -195,14 +196,7 @@
         </nav>
     </header>
     <!-- End header -->
-
-    <div class="all-title-box">
-        <div class="container text-center">
-            <h1>Connecting Opportunities with Talent<span class="m_1">A job for you.</span></h1>
-        </div>
-    </div>
-
-    <div id="overviews" class="section wb">
+    <div id="overviews" class="section wb" style="padding:0px;padding-bottom:20px;">
         <div class="container" id="output">
         </div><!-- end section -->
     </div>
