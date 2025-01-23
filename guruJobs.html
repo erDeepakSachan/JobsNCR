@@ -40,7 +40,7 @@
     $(document).ready(function () {
         // Make an AJAX request to fetch the Excel file on page load
         $.ajax({
-            url: '/Jobs/Jobs.xlsx', // Path to the Excel file on the server
+            url: '/Jobs/GuruJobs.xlsx', // Path to the Excel file on the server
             method: 'GET',
             xhrFields: {
                 responseType: 'arraybuffer' // Ensure the response is treated as binary data
@@ -77,7 +77,8 @@
                 outputTable += '<hr class="invis">';
                 var rowCtr = 1;
                 jsonData.forEach(row => {
-                    if (rowCtr == 1) {
+                    if (rowCtr > 1) {
+                    if (rowCtr == 2) {
                         outputTable += '<div class="row">';
                     }
                     outputTable += '<div class="col-lg-3 col-md-6 col-12">';
@@ -87,7 +88,7 @@
                         if (colCtr == 1) {
                             outputTable += '<div class="course-br" style="padding: 0px">';
                             outputTable += '<div class="course-title">';
-                            moreInfo = `<p style="margin-bottom: 0rem"><a href="index.html?id=${cell}" target="_blank" title=""><u>अधिक जानकारी के लिए यहां क्लिक करें</u></a></p>`;
+                            moreInfo = `<p style="margin-bottom: 0rem"><a href="JobDetails.html?id=${cell}&jobs=GuruJobs.xlsx" target="_blank" title=""><u>अधिक जानकारी के लिए यहां क्लिक करें</u></a></p>`;
                         } else if (colCtr == 2) {
                             outputTable += `<h5 class="center"><u><b style="color: blue;">${cell}</b></u></h5>`;
                             outputTable += '</div>';
@@ -95,7 +96,7 @@
                             //outputTable += '<p>';
                             outputTable += '<ul>';
                         } else if (colCtr == 3) {
-                            outputTable += `<li>${cell}</li>`;
+                            outputTable += `<li>Location: ${cell}</li>`;
                             //moreInfo = `<p><a href="${cell}" title=""><u>अधिक जानकारी के लिए यहां क्लिक करें</u></a></p>`;
                         } else if (colCtr == 4) {
                             //postedOn = `<li><i class="fa fa-calendar" aria-hidden="true"></i>${cell}</li>`;
@@ -117,11 +118,12 @@
                     outputTable += '</div>';
                     outputTable += '</div>';
                     outputTable += '</div>';
-                    if (rowCtr == 4) {
+                    if (rowCtr == 5) {
                         outputTable += '</div>';
                         outputTable += '<hr class="hr3">';
-                        rowCtr = 0;
+                        rowCtr = 1;
                     }
+                }
                     rowCtr++;
                 });
 
