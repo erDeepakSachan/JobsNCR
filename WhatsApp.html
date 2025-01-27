@@ -7,40 +7,57 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         .whatsapp-button {
-            background-color: #25d366; /* WhatsApp green */
+            background-color: #25d366;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 16px;
-            display: inline-block;
-            margin-top: 20px;
         }
-
-            .whatsapp-button:hover {
-                background-color: #128C7E;
-            }
     </style>
 </head>
 <body>
 
     <h1>Contact Us</h1>
-    <p>If you have any questions, feel free to contact us via WhatsApp!</p>
 
-    <!-- WhatsApp Contact Button -->
-    <a href="https://wa.me/919818732235?text=Hello,%20I%20have%20a%20question!"
-       class="whatsapp-button"
-       id="whatsappButton"
-       target="_blank">
-        Chat with us on WhatsApp
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- WhatsApp Button Placeholder -->
+    <a href="#" id="whatsappLink" class="whatsapp-button" target="_blank" style="display: none;">
+        Send Message via WhatsApp
     </a>
 
     <script>
 $(document).ready(function() {
-    // You can also customize the WhatsApp button dynamically using jQuery
-    $('#whatsappButton').on('click', function() {
-        // Optionally, track button click or add some additional logic here
-        console.log("WhatsApp chat initiated.");
+    // When form is submitted
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault(); // Prevent form from refreshing the page
+
+        // Get form data
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+
+        // Create WhatsApp message
+        var whatsappMessage = `Hello, I have a message from the website Contact Us form:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+        // WhatsApp link with predefined message
+        var phoneNumber = '919818732235';  // Replace with your phone number
+        var whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Show WhatsApp link
+        $('#whatsappLink').attr('href', whatsappUrl).show();
     });
 });
     </script>
