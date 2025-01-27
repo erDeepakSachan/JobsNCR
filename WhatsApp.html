@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .whatsapp-button {
+            background-color: #25d366; /* WhatsApp green */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+            .whatsapp-button:hover {
+                background-color: #128C7E;
+            }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+    <p>If you have any questions, feel free to contact us via WhatsApp!</p>
+
+    <!-- WhatsApp Contact Button -->
+    <a href="https://wa.me/919818732235?text=Hello,%20I%20have%20a%20question!"
+       class="whatsapp-button"
+       id="whatsappButton"
+       target="_blank">
+        Chat with us on WhatsApp
+    </a>
+
+    <script>
+$(document).ready(function() {
+    // You can also customize the WhatsApp button dynamically using jQuery
+    $('#whatsappButton').on('click', function() {
+        // Optionally, track button click or add some additional logic here
+        console.log("WhatsApp chat initiated.");
+    });
+});
+    </script>
+
+</body>
+</html>
