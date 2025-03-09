@@ -1,0 +1,102 @@
+@media only screen and (max-width:1399px)
+{
+
+}
+
+@media only screen and (max-width:1299px)
+{
+	
+}
+
+@media only screen and (max-width:1199px)
+{
+	.bn_search{width:900px;}
+	ul.navigation{gap:25px;}
+	.phonenum{display:none;}
+	.f_links{justify-content:flex-start;}
+	.map {margin-top: 50px;}
+	.map iframe{height: 400px;}
+	.card1 {width: 210px;}
+	#progressbar{    left: 187px;}
+	.stepsFrm {    width: calc(100% - 210px);    padding: 50px 30px 50px 75px;}
+	.main .gallCard{grid-template-columns: repeat(3, 1fr);}
+
+}
+
+@media only screen and (max-width:991px)
+{
+	.bn_search{width:700px;}
+	.head_btns span{display:none;}
+	.head_btns button {line-height:44px; height:40px; display:flex; align-items:center; justify-content:center; font-size:18px; width:40px;}
+	.head_btns button svg, .head_btns button i{display:block;}
+	ul.navigation{gap:35px;}
+	
+	.main-content{padding-bottom:40px;}
+	.card1{width: 100%; border-right: 0px; padding: 90px 0px 0px 0px; }
+	.stepsFrm{width: 100%; padding:50px 0px 0px 0px;}
+	.card1{ margin: 0px; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; min-height:auto;}
+	#progressbar {  top: 30px;  left: 0;    display: flex;    flex-wrap: wrap;    align-items: center;    justify-content: space-between;    width: 100%;    margin: 0 auto;    right: 0;}
+	#progressbar li{margin-bottom: 0px; width: 25%}
+	.card1 h6{text-align: center; justify-content:center; padding-right: 0px; height: auto; width:25%; font-size: 16px; margin-bottom: 0px !important;}
+	#progressbar:before {    content: "";    width: 545px;    height: 1px;    background: #E08A8E;    top: calc(50% - 1px);    position: absolute;    z-index: -1;    left: 0;    right: 0;    margin: 0 auto;}
+	p#back{    line-height: 45px; bottom: 0; top: auto; left: 0; right: auto;}
+	.sidebar{left:-100%;}
+	.sidebar.active{left: 0px; width: 300px;}
+	.contentBody{margin-left: 0px; width: 100%;}
+	.box-img>img, .contentBody.active .box-img>img{height: auto;}
+	.mb_filter{display: flex;}
+	.sidebar.active .hideshow{transform: rotate(0deg); right: -20px;}
+	.desktopviewbtn{display: none;}
+	.mobileivewbtn{display: flex;}
+
+}
+
+@media only screen and (max-width:767px)
+{
+	.bn_search{width:95%; padding:15px;}
+	.bn_in .form-group select, .bn_in .form-group input, .bn_in button{height:50px; line-height:50px;}
+	.head_btns button.hamburger{display:flex;}
+	ul.navigation {height:0px; overflow:hidden; gap:0px; position:absolute; top:82px; background:#000; width:100%; left:0; margin:0px;}
+	ul.navigation {-webkit-transition:all 0.3s ease-in-out; -moz-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out;}
+	ul.navigation {transition:all 0.3s ease-in-out;}
+	ul.navigation li{width:100%;}
+	ul.navigation li a {display:block; line-height:30px; padding:10px 21px; border-bottom:1px solid #242424;}
+	.f_links{flex-wrap:wrap; gap:10px; padding-top:16px;}
+	.f_links li{width:35%;}
+	.f_links li a{line-height:normal;}
+	
+	.card1 h6{font-size:14px;}
+	#progressbar:before{width: 400px;}
+	.regHead{padding-bottom: 15px; margin-bottom: 25px;}
+	.sidebar{left: -100%; z-index: 99;}
+	.contentBody{width: 100%; margin-left: 0px;}
+	.sidebar.active{left: 0px; }
+	.box-img>img, .contentBody.active .box-img>img{height: auto;}
+	.main .gallCard{grid-template-columns: repeat(2, 1fr);}
+	.pagination{justify-content: center;}
+
+}
+
+@media only screen and (max-width:575px)
+{
+	.bn_search{width:95%; padding:15px;}
+	.bn_in .form-group:first-child, .bn_in .form-group:nth-child(2), .bn_in button{width:100%; margin-bottom:5px;}
+	.bn_in .form-group select, .bn_in .form-group input{border-radius:5px;}
+	.bn_in button{margin-bottom:0px; border-radius:5px;}
+	.social_share{display:block; position:relative; margin-top:20px;}
+	.share_btn{width:50%; line-height:45px;}
+	.f_links{justify-content:center;}
+	.f_links li{width:auto;  margin-right:15px;}
+	ul.socialItems{flex-wrap:wrap; right:0px; width:50%;}
+	ul.socialItems li{width:33.33%;}
+	ul.socialItems li a{line-height:45px; width:100%;}
+	.bn_search{ top:45%;}
+	.card1 h6{display: none;}
+	.stepsFrm{padding-top: 25px;}
+	#progressbar:before{width: 75%;}
+	.contentBody{padding: 30px 15px;}
+	.main .gallCard{grid-template-columns: repeat(1, 1fr);}
+	.sidebar.active {    width: 250px;}
+	
+
+}
