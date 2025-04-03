@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Site Metas -->
-<title>SmartEDU - Education Responsive HTML5 Template</title>
+<title>Job Details</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -140,6 +140,7 @@
                             var cell = row[colCtr];
                             if (colCtr == 1) {
                                 tableData += `<h3 class="widget-title" style="padding-top:10px;margin-bottom: 0px;">${cell}</h3><ul>`;
+                                $('#jobName').text(cell);
                             }
                             if (colCtr > 4 && colCtr < 19) {
                                 tableData += `<li style="padding-top:1px; padding-bottom:0px;">${cell}</li>`;
@@ -225,7 +226,7 @@
 
     <div class="all-title-box">
         <div class="container text-center">
-            <h1>Blog Single<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+            <h1>job Details<span id="jobName" class="m_1"></span></h1>
         </div>
     </div>
 
@@ -259,7 +260,7 @@
                                 </ul>-->
                             </div>
                             <div class="blog-title">
-                                <h5>-------------Other Details-------------</h5>
+                                <h5>-------------Disclaimer(अस्वीकरण)-------------</h5>
                             </div>
                             <div class="blog-desc" id="paraData">
                                 <!--<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
