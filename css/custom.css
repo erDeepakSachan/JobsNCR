@@ -1,2 +1,10 @@
-
+.facebook-share {
+    background-color: #4267B2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 /** ADD YOUR AWESOME CODES HERE **/
