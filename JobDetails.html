@@ -126,7 +126,6 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                 responseType: 'arraybuffer' // Ensure the response is treated as binary data
             },
             success: function (response) {
-                debugger;
                 // Convert the binary data to an array buffer
                 const data = new Uint8Array(response);
                 const workbook = XLSX.read(data, { type: 'array' });
