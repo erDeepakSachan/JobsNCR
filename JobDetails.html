@@ -1,6 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
+<title>Your Website Title</title>
+<!-- You can use Open Graph tags to customize link previews.
+Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+<meta property="og:url" content="https://www.naukripesa.com/JobDetails.html?id=1&jobs=HomeJobs.xlsx" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Where your next job awaits." />
+<meta property="og:description" content="We provide latest job opening free of cost." />
+<meta property="og:image" content="https://www.naukripesa.com/images/blog_1.jpg" />
 <!-- Basic -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -175,6 +182,15 @@
             return null; // Return null if parameter is not found
         }
     });
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
 </script>
 
 <!--[if lt IE 9]>
@@ -245,8 +261,12 @@
                             </div>
                             <div class="meta-info-blog">
                                 <!--<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>-->
-                                <span><i class="fa fa-tag"></i>  <a href="#">Posted On: 03-March-2025</a> </span>
+                                <!--<span><i class="fa fa-tag"></i>  <a href="#">Posted On: 03-March-2025</a> </span>-->
                                 <!--<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>-->
+                                <div class="fb-share-button"
+                                     data-href="https://www.naukripesa.com/JobDetails.html?id=1&jobs=HomeJobs.xlsx"
+                                     data-layout="button_count">
+                                </div>
                             </div>
                             <br />
                             <div class="widget-categories" id="tableData">
