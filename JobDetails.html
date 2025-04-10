@@ -201,7 +201,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         var url = 'https://naukripesa.com/JobDetails.html?id=' + jobId + '&jobs=' + jobs;
 
         const content = document.getElementById('jobDetails').innerText;
-        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
+        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + "\n" + url);
         const whatsappUrl = `https://wa.me/?text=${message}`;
         window.open(whatsappUrl, '_blank');
     }
@@ -215,7 +215,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 
         const pageUrl = encodeURIComponent(window.location.href);
         const content = document.getElementById('jobDetails').innerText;
-        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
+        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + "\n" + url);
         const telegramUrl = `https://t.me/share/url?url=${pageUrl}&text=${message}`;
         window.open(telegramUrl, '_blank');
     }
