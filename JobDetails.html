@@ -171,45 +171,54 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                 alert('Failed to load the Excel file. ' + textStatus + ': ' + errorThrown);
             }
         });
-
-        function GetParameterValues(param) {
-            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-            for (var i = 0; i < url.length; i++) {
-                var urlparam = url[i].split('=');
-                if (urlparam[0] === param) {
-                    return urlparam[1];
-                }
-            }
-            return null; // Return null if parameter is not found
-        }
-
-        // Share on FB
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        // Share of Whats App
-        function shareCustomContent() {
-            const content = document.getElementById('jobDetails').innerText;
-            const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
-            const whatsappUrl = `https://wa.me/?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        }
-
-        //Share on Telegram
-        function shareOnTelegram() {
-            const pageUrl = encodeURIComponent(window.location.href);
-            const content = document.getElementById('jobDetails').innerText;
-            const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
-            const telegramUrl = `https://t.me/share/url?url=${pageUrl}&text=${message}`;
-            window.open(telegramUrl, '_blank');
-        }
-
     });
+
+    function GetParameterValues(param) {
+        var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < url.length; i++) {
+            var urlparam = url[i].split('=');
+            if (urlparam[0] === param) {
+                return urlparam[1];
+            }
+        }
+        return null; // Return null if parameter is not found
+    }
+
+    // Share on FB
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // Share of Whats App
+    function shareCustomContent() {
+
+        var jobId = GetParameterValues('id');
+        var jobs = GetParameterValues('jobs');
+        var url = 'https://naukripesa.com/JobDetails.html?id=' + jobId + '&jobs=' + jobs;
+
+        const content = document.getElementById('jobDetails').innerText;
+        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
+        const whatsappUrl = `https://wa.me/?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+    }
+
+    //Share on Telegram
+    function shareOnTelegram() {
+
+        var jobId = GetParameterValues('id');
+        var jobs = GetParameterValues('jobs');
+        var url = 'https://naukripesa.com/JobDetails.html?id=' + jobId + '&jobs=' + jobs;
+
+        const pageUrl = encodeURIComponent(window.location.href);
+        const content = document.getElementById('jobDetails').innerText;
+        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
+        const telegramUrl = `https://t.me/share/url?url=${pageUrl}&text=${message}`;
+        window.open(telegramUrl, '_blank');
+    }
 
 </script>
 
