@@ -196,7 +196,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     // Share of Whats App
     function shareCustomContent() {
         const content = document.getElementById('tableData').innerText;
-        const message = encodeURIComponent("www.naukripesa.com" + content);
+        const message = encodeURIComponent("https://naukripesa.com/" + "\n" + content);
         const whatsappUrl = `https://wa.me/?text=${message}`;
         window.open(whatsappUrl, '_blank');
     }
@@ -205,7 +205,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     function shareOnTelegram() {
         const pageUrl = encodeURIComponent(window.location.href);
         const content = document.getElementById('tableData').innerText;
-        const message = encodeURIComponent("www.naukripesa.com" + content);
+        const message = encodeURIComponent("https://naukripesa.com/" + "\n" + content);
         const telegramUrl = `https://t.me/share/url?url=${pageUrl}&text=${message}`;
         window.open(telegramUrl, '_blank');
     }
