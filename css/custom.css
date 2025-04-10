@@ -7,4 +7,12 @@
     cursor: pointer;
     font-weight: bold;
   }
-/** ADD YOUR AWESOME CODES HERE **/
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }

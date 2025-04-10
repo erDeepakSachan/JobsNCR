@@ -184,6 +184,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         }
     });
 
+    // Share on FB
     (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -191,6 +192,14 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    // Share of Whats App
+    function shareCustomContent() {
+        const content = document.getElementById('tableData').innerText;
+        const message = encodeURIComponent(content);
+        const whatsappUrl = `https://chat.whatsapp.com/Kr7SFjCgBre8FBvPjLLPf2?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+    }
 
 </script>
 
@@ -268,6 +277,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                                      data-href=""
                                      data-layout="button_count">
                                 </div>
+                                <button class="whatsapp-button" onclick="shareCustomContent()">Share on WhatsApp</button>
                             </div>
                             <br />
                             <div class="widget-categories" id="tableData">
