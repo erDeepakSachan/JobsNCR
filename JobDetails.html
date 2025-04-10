@@ -197,7 +197,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     function shareCustomContent() {
         const content = document.getElementById('tableData').innerText;
         const message = encodeURIComponent(content);
-        const whatsappUrl = `https://chat.whatsapp.com/Kr7SFjCgBre8FBvPjLLPf2?text=${message}`;
+        const whatsappUrl = `https://wa.me/?text=${message}`;
         window.open(whatsappUrl, '_blank');
     }
 
