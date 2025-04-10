@@ -195,8 +195,8 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 
     // Share of Whats App
     function shareCustomContent() {
-        const content = document.getElementById('tableData').innerText;
-        const message = encodeURIComponent("https://naukripesa.com/" + "\n" + content);
+        const content = document.getElementById('jobDetails').innerText;
+        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
         const whatsappUrl = `https://wa.me/?text=${message}`;
         window.open(whatsappUrl, '_blank');
     }
@@ -204,8 +204,8 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     //Share on Telegram
     function shareOnTelegram() {
         const pageUrl = encodeURIComponent(window.location.href);
-        const content = document.getElementById('tableData').innerText;
-        const message = encodeURIComponent("https://naukripesa.com/" + "\n" + content);
+        const content = document.getElementById('jobDetails').innerText;
+        const message = encodeURIComponent(content + "\n" + "Visit our website for more jobs" + url);
         const telegramUrl = `https://t.me/share/url?url=${pageUrl}&text=${message}`;
         window.open(telegramUrl, '_blank');
     }
@@ -273,7 +273,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                         <div class="image-blog">
                             <img src="images/blog_single.jpg" alt="" class="img-fluid">
                         </div>
-                        <div class="post-content">
+                        <div class="post-content" id="jobDetails">
                             <div class="post-date">
                                 <span class="day">New</span>
                                 <span class="month">Job</span>
