@@ -116,13 +116,16 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     $(document).ready(function () {
         // Get Job ID
         debugger;
-        var jobId = GetParameterValues('id');
-        var jobFromPage = GetParameterValues('jobs');
+        var id = GetParameterValues('id');
+        var jobDetails = id.split(":");
+        var jobId = jobDetails[0];
+        var jobFromPage = jobDetails[1];
+        //var jobFromPage = GetParameterValues('jobs');
         var jobs = "";
         if (jobFromPage == 1) {
             jobs = "HomeJobs.xlsx";
         }
-        var url = 'https://naukripesa.com/JobDetails.html?id=' + jobId + '&jobs=' + jobs;
+        var url = 'https://naukripesa.com/JobDetails.html?id=' + id;
         $('meta[property="og\\:url"]').attr('content', url);
         $('.fb-share-button.facebook-share').attr('data-href', url);
         //https://naukripesa.com/JobDetails.html?id=23&jobs=HomeJobs.xlsx
