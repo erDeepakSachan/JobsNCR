@@ -3,7 +3,7 @@
 <title>Your Website Title</title>
 <!-- You can use Open Graph tags to customize link previews.
 Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-<meta property="og:url" content="https://naukripesa.com/JobDetails.html?id=23&jobs=HomeJobs.xlsx" />
+<meta property="og:url" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Where your next job awaits." />
 <meta property="og:description" content="We provide latest job opening free of cost." />
@@ -117,10 +117,14 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         // Get Job ID
         debugger;
         var jobId = GetParameterValues('id');
-        var jobs = GetParameterValues('jobs');
+        var jobFromPage = GetParameterValues('jobs');
+        var jobs = "";
+        if (jobFromPage == 1) {
+            jobs = "HomeJobs.xlsx";
+        }
         var url = 'https://naukripesa.com/JobDetails.html?id=' + jobId + '&jobs=' + jobs;
-        //$('meta[property="og\\:url"]').attr('content', url);
-        //$('.fb-share-button.facebook-share').attr('data-href', url);
+        $('meta[property="og\\:url"]').attr('content', url);
+        $('.fb-share-button.facebook-share').attr('data-href', url);
         //https://naukripesa.com/JobDetails.html?id=23&jobs=HomeJobs.xlsx
         // Make an AJAX request to fetch the Excel file on page load
         $.ajax({
