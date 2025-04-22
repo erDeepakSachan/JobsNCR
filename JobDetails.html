@@ -116,7 +116,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     $(document).ready(function () {
         // Get Job ID
         debugger;
-        var id = GetParameterValues('id');
+        var id = GetParameterValues('id').replace("%3A", ":");
         var jobDetails = id.split(":");
         var jobId = jobDetails[0];
         var jobFromPage = jobDetails[1];
