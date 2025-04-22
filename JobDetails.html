@@ -119,8 +119,8 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         var jobId = GetParameterValues('id');
         var jobs = GetParameterValues('jobs');
         var url = 'https://naukripesa.com/JobDetails.html?id=' + jobId + '&jobs=' + jobs;
-        $('meta[property="og\\:url"]').attr('content', url);
-        $('.fb-share-button.facebook-share').attr('data-href', url);
+        //$('meta[property="og\\:url"]').attr('content', url);
+        //$('.fb-share-button.facebook-share').attr('data-href', url);
         //https://naukripesa.com/JobDetails.html?id=23&jobs=HomeJobs.xlsx
         // Make an AJAX request to fetch the Excel file on page load
         $.ajax({
