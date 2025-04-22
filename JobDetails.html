@@ -171,18 +171,17 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                 alert('Failed to load the Excel file. ' + textStatus + ': ' + errorThrown);
             }
         });
-    });
-
-    function GetParameterValues(param) {
-        var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-        for (var i = 0; i < url.length; i++) {
-            var urlparam = url[i].split('=');
-            if (urlparam[0] === param) {
-                return urlparam[1];
+        function GetParameterValues(param) {
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < url.length; i++) {
+                var urlparam = url[i].split('=');
+                if (urlparam[0] === param) {
+                    return urlparam[1];
+                }
             }
+            return null; // Return null if parameter is not found
         }
-        return null; // Return null if parameter is not found
-    }
+    });
 
     // Share on FB
     (function (d, s, id) {
